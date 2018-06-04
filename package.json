@@ -1,15 +1,11 @@
 {
   "name": "egg-gql",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Eggjs supports graphql.",
   "eggPlugin": {
     "name": "graphql"
   },
-  "keywords": [
-    "egg",
-    "eggPlugin",
-    "egg-plugin"
-  ],
+  "keywords": ["egg", "eggPlugin", "egg-plugin"],
   "dependencies": {
     "apollo-server-koa": "^1.3.6",
     "graphql": "^0.13.2",
@@ -41,11 +37,7 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod"
   },
-  "files": [
-    "app.js",
-    "agent.js",
-    "config"
-  ],
+  "files": ["app.js", "agent.js", "config"],
   "ci": {
     "version": "8, 9"
   },

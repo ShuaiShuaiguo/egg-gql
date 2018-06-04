@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   watchDirs: {
     graphqlClass: {
@@ -6,8 +8,8 @@ module.exports = {
       pattern: '**/(model|connector)*.(ts|js)',
       generator: 'class',
       caseStyle: 'lower',
-      trigger: ['add', 'unlink'],
-      enabled: true
-    }
-  }
+      trigger: [ 'add', 'unlink' ],
+      enabled: true,
+    },
+  },
 };

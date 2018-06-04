@@ -5,7 +5,11 @@
   "eggPlugin": {
     "name": "graphql"
   },
-  "keywords": ["egg", "eggPlugin", "egg-plugin"],
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
   "dependencies": {
     "apollo-server-koa": "^1.3.6",
     "graphql": "^0.13.2",
@@ -37,7 +41,15 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod"
   },
-  "files": ["app.js", "agent.js", "config"],
+  "files": [
+    "index.js",
+    "app",
+    "config",
+    "agent.js",
+    "lib",
+    "app.js",
+    "tsHelper.js"
+  ],
   "ci": {
     "version": "8, 9"
   },

@@ -1,3 +1,5 @@
+'use strict';
+
 const { BaseContextClass } = require('egg');
 
 /**

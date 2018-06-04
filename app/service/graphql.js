@@ -1,9 +1,6 @@
-const {
-  execute,
-  formatError,
-  ExecutionResult,
-  GraphQLFormattedError
-} = require('graphql');
+'use strict';
+
+const { execute, formatError } = require('graphql');
 const gql = require('graphql-tag');
 const { Service } = require('egg');
 
@@ -33,7 +30,7 @@ class GraphqlService extends Service {
 
       result = {
         data: {},
-        errors: [e]
+        errors: [ e ],
       };
     }
 

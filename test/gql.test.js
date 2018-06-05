@@ -15,7 +15,8 @@ describe('test/gql.test.js', () => {
   afterEach(mock.restore);
 
   it('should GET /', () => {
-    return app.httpRequest()
+    return app
+      .httpRequest()
       .get('/')
       .expect('hi, graphql')
       .expect(200);

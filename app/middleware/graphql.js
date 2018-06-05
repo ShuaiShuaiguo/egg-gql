@@ -22,6 +22,9 @@ module.exports = config => {
       if (onPreGraphQL) {
         await onPreGraphQL(ctx);
       }
+
+      console.log('---ctx---', ctx.app.schema);
+
       return graphqlKoa({
         schema: ctx.app.schema,
       });

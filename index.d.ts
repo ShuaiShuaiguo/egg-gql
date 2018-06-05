@@ -9,9 +9,10 @@ declare module 'egg' {
     [key: string]: Connector | Model;
   }
 
-  interface Aplication {
+  interface Application {
     schema: GraphQLSchema;
   }
+
   interface Context {
     graphql: IGraphqlClass;
   }

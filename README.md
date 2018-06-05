@@ -36,7 +36,7 @@ $ npm i egg-gql --save
 // {app_root}/config/plugin.js
 exports.graphql = {
   enable: true,
-  package: 'egg-gql',
+  package: 'egg-gql'
 };
 ```
 
@@ -44,8 +44,7 @@ exports.graphql = {
 
 ```js
 // {app_root}/config/config.default.js
-exports.graphql = {
-};
+exports.graphql = {};
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
@@ -57,6 +56,11 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).
+
+Regarding circular dependencies:
+Error: typeDef array must contain only strings and functions, got object
+https://github.com/apollographql/apollo-server/issues/126
+It's ok in ES.
 
 ## License
 

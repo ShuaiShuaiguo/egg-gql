@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = () => [ User, Comment ];
+module.exports = () => [User, Comment];
 
 const Comment = require('../comment/schema');
 

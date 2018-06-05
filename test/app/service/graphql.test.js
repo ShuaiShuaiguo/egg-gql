@@ -1,6 +1,6 @@
 'use strict';
 
-// const assert = require('assert');
+const assert = require('assert');
 const eggMock = require('egg-mock');
 
 describe('test/app/service.test.js', () => {
@@ -15,4 +15,15 @@ describe('test/app/service.test.js', () => {
   });
 
   after(eggMock.restore);
+
+  assert('should return empty comment', async () => {
+    const ctx = app.mockContext();
+    const query = JSON.stringify({
+      query: '{comments}'
+    });
+
+    const res = await ctx.service.graphql.query(query);
+
+    assert.deepEqual(res.data.comments, []);
+  });
 });

@@ -10,7 +10,7 @@ module.exports = config => {
 
   return async (ctx, next) => {
     if (ctx.path === router) {
-      if (ctx.request.accepts([ 'json', 'html' ]) === 'html' && graphiql) {
+      if (ctx.request.accepts(['json', 'html']) === 'html' && graphiql) {
         if (onPreGraphiQL) {
           await onPreGraphiQL(ctx);
         }
@@ -22,8 +22,6 @@ module.exports = config => {
       if (onPreGraphQL) {
         await onPreGraphQL(ctx);
       }
-
-      console.log('---ctx---', ctx.app.schema);
 
       return graphqlKoa({
         schema: ctx.app.schema,

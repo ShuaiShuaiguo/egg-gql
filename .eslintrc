@@ -1,6 +1,8 @@
 {
   "extends": "eslint-config-egg",
   "rules": {
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "array-bracket-spacing": "off",
+    "comma-dangle": "off"
   }
 }

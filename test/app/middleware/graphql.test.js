@@ -19,14 +19,11 @@ describe('test/app/middleware.test.js', () => {
   it('should return user 1', async () => {
     const res = await app
       .httpRequest()
-      .get(
-        '/graphql?query=query getUser($id:Int){user(id:$id){name}}&variables={"id":1}'
-      )
+      .get('/graphql?query=query {user(id: 1){lastName}}')
       .expect(200);
-
     assert.deepEqual(res.body.data, {
       user: {
-        name: 'name1'
+        lastName: 'lastName1'
       }
     });
   });

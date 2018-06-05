@@ -14,13 +14,13 @@ class UserConnector extends Connector {
         id,
         firstName: `firstName${id}`,
         lastName: `lastName${id}`,
-        comments: [],
+        comments: []
       }))
     );
   }
 
   fetchById(id) {
-    this.loader.load(id);
+    return this.loader.load(id);
   }
 }
 

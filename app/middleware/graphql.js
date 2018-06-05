@@ -15,17 +15,17 @@ module.exports = config => {
           await onPreGraphiQL(ctx);
         }
         return graphiqlKoa({
-          endpointURL: router,
+          endpointURL: router
         })(ctx);
       }
 
       if (onPreGraphQL) {
         await onPreGraphQL(ctx);
       }
-
       return graphqlKoa({
         schema: ctx.app.schema,
-      });
+        context: ctx
+      })(ctx);
     }
     await next();
   };

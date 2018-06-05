@@ -9,7 +9,7 @@ describe('test/app/middleware.test.js', () => {
   before(() => {
     app = eggMock.app({
       baseDir: 'apps/gql-test',
-      plugin: 'graphql',
+      plugin: 'graphql'
     });
     return app.ready();
   });
@@ -20,14 +20,14 @@ describe('test/app/middleware.test.js', () => {
     const res = await app
       .httpRequest()
       .get(
-        '/graphql?query=query+getUser($id:Int){user(id:$id){name}}&variables={"id":1}'
+        '/graphql?query=query getUser($id:Int){user(id:$id){name}}&variables={"id":1}'
       )
       .expect(200);
 
     assert.deepEqual(res.body.data, {
       user: {
-        name: 'name1',
-      },
+        name: 'name1'
+      }
     });
   });
 });

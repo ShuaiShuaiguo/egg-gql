@@ -12,7 +12,8 @@ const User = `
   type User {
     id: Int!
     firstName: String
-    lastName: String
+    lastName: String 
     comments: [Comment]
+    upperName: String @upper
   }
 `;

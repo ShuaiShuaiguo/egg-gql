@@ -26,4 +26,30 @@ describe('test/app/service.test.js', () => {
 
     assert.deepEqual(res.data.comments, []);
   });
+
+  it('should return user with no comments', async () => {
+    const ctx = app.mockContext();
+    const query = JSON.stringify({
+      query: '{ user(id: 3) { comments } }'
+    });
+    const resp = await ctx.service.graphql.query(query);
+    assert.deepEqual(resp.data, { user: { comments: [] } });
+  });
+
+  it('should return error', async () => {
+    const ctx = app.mockContext();
+    const resp = await ctx.service.graphql.query('');
+    assert.deepEqual(resp.data, {});
+    assert.equal(resp.errors[0].message, 'Unexpected end of JSON input');
+  });
+
+  it("should return name's upperCase with @upper directive", async () => {
+    const ctx = app.mockContext();
+    const resp = await ctx.service.graphql.query(
+      JSON.stringify({
+        query: '{ user(id: 1) { upperName } }'
+      })
+    );
+    assert.deepEqual(resp.data, { user: { upperName: 'NAME1' } });
+  });
 });

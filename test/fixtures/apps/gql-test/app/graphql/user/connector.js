@@ -14,6 +14,7 @@ class UserConnector extends Connector {
         id,
         firstName: `firstName${id}`,
         lastName: `lastName${id}`,
+        upperName: `name${id}`,
         comments: []
       }))
     );

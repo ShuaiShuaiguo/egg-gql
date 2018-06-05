@@ -27,4 +27,16 @@ describe('test/app/middleware.test.js', () => {
       }
     });
   });
+
+  it('should return user 2', async () => {
+    const res = await app
+      .httpRequest()
+      .get('/user')
+      .expect(200);
+    assert.deepEqual(res.body.data, {
+      user: {
+        lastName: 'lastName2'
+      }
+    });
+  });
 });

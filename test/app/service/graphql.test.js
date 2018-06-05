@@ -9,6 +9,7 @@ describe('test/app/service.test.js', () => {
   before(() => {
     app = eggMock.app({
       baseDir: 'apps/gql-test',
+      plugin: 'graphql'
     });
     return app.ready();
   });

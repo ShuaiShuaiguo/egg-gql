@@ -22,6 +22,7 @@ class GraphqlService extends Service {
         variables,
         operationName
       );
+
       if (result && result.errors) {
         result.errors = result.errors.map(formatError);
       }
@@ -30,7 +31,7 @@ class GraphqlService extends Service {
 
       result = {
         data: {},
-        errors: [ e ],
+        errors: [e]
       };
     }
 

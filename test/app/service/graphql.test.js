@@ -16,7 +16,7 @@ describe('test/app/service.test.js', () => {
 
   after(eggMock.restore);
 
-  assert('should return empty comment', async () => {
+  it('should return empty comment', async () => {
     const ctx = app.mockContext();
     const query = JSON.stringify({
       query: '{comments}'

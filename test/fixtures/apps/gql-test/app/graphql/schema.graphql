@@ -1,5 +1,0 @@
-type Applicant {
-  name: String
-}
-
-directive @upper on FIELD_DEFINITION

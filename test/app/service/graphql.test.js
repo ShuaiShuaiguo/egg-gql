@@ -52,4 +52,13 @@ describe('test/app/service.test.js', () => {
     );
     assert.deepEqual(resp.data, { user: { upperName: 'NAME1' } });
   });
+  it('should return createAt with @date directive', async () => {
+    const ctx = app.mockContext();
+    const resp = await ctx.service.graphql.query(
+      JSON.stringify({
+        query: '{ user(id: 1) { createAt } }'
+      })
+    );
+    assert.deepEqual(resp.data, { user: { createAt: '2018-6-6' } });
+  });
 });

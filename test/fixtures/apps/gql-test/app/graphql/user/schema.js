@@ -15,5 +15,6 @@ const User = `
     lastName: String 
     comments: [Comment]
     upperName: String @upper
+    createAt: Date @date
   }
 `;

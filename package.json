@@ -1,6 +1,6 @@
 {
   "name": "egg-gql",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Eggjs supports graphql.",
   "eggPlugin": {
     "name": "graphql"
@@ -63,7 +63,6 @@
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-gql#readme",
   "author": "gs",
   "license": "MIT"
 }

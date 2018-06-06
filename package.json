@@ -50,7 +50,7 @@
     "agent.js",
     "lib",
     "app.js",
-    "tsHelper.js",
+    "tshelper.js",
     "index.d.ts"
   ],
   "ci": {

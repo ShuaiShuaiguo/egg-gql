@@ -51,6 +51,8 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
+ts example see [run-book](https://github.com/ShuaiShuaiguo/run-books)
+
 <!-- example here -->
 
 ## Questions & Suggestions

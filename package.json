@@ -1,11 +1,10 @@
 {
   "name": "egg-gql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Eggjs supports graphql.",
   "eggPlugin": {
     "name": "graphql"
   },
-  "types": "./index.d.ts",
   "keywords": [
     "egg",
     "eggPlugin",
@@ -51,7 +50,8 @@
     "agent.js",
     "lib",
     "app.js",
-    "tsHelper.js"
+    "tsHelper.js",
+    "index.d.ts"
   ],
   "ci": {
     "version": "8, 9"

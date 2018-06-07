@@ -50,8 +50,7 @@
     "agent.js",
     "lib",
     "app.js",
-    "tshelper.js",
-    "index.d.ts"
+    "tshelper.js"
   ],
   "ci": {
     "version": "8, 9"
